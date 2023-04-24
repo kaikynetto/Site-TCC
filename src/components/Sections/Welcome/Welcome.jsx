@@ -10,7 +10,7 @@ export default function Welcome() {
         <HeroRow>
           <Column1>
             <TextWrapper>
-              <Heading>A flecha dourada dos freelancers</Heading>
+              <Heading>A flecha dourada <br/> dos freelancers</Heading>
               <Subtitle>A holding líder em tecnologia por trás do aplicativo Tasking conectando talentos ao sucesso.</Subtitle>
             </TextWrapper>
           </Column1>
