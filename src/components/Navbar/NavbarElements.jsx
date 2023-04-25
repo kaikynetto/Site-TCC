@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
-  background: ${({ scrollNav }) => (scrollNav ? "#000" : "transparent")};
+  background: ${({ scrollNav }) => (scrollNav ? "#121313" : "transparent")};
   height: 80px;
 //   margin-top: -80px;
   display: flex;
@@ -28,7 +28,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled.a`
-  color: #fff;
+  color: #b79950;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
