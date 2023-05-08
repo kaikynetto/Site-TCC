@@ -64,7 +64,7 @@ const Navbar = ({ toggle }) => {
             <NavItem>
                 <NavLinks
                   smooth
-                  duration={500}
+                  duration={50}
                   onClick={() =>  window.scroll({
                     top: 0,
                     left: 0,
