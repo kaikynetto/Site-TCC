@@ -12,7 +12,7 @@ export const HeroContainer = styled.div`
 export const HeroWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 80vh;
+  height: 84vh;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
