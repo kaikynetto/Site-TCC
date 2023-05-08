@@ -60,7 +60,12 @@ export const Heading = styled.h1`
 export const Subtitle = styled.h1`
   color: white;
   opacity: 0.6;
+  align-items: start;
+  justify-content: center;
+  // text-align: center;
+  align-content: center;
   font-weight: 200;
+  margin-top: 15px;
   font-size: 22px;
   // text-transform: uppercase;
 `;
@@ -70,8 +75,9 @@ export const ImgWrap = styled.div`
   height: 100%;
   align-items:center;
   justify-content: center;
+  text-align: center;
   align-content: center;
-  margin-left: 25%;
+  margin-left: 60%;
   margin-top: 10px;
 `;
 
@@ -79,4 +85,8 @@ export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
+  align-items:center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
 `;
