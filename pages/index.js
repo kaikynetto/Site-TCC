@@ -26,7 +26,7 @@ export default function Home() {
       <Sidebar toggle={toggle} isOpen={isOpen} />
       <Navbar toggle={toggle} />
       <Welcome/>
-      <Features title="features"/>
+      <Features id="features"/>
       <Encontre/>
       <Footer/>
     </>

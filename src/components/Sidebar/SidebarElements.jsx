@@ -86,3 +86,28 @@ export const SidebarRoute = styled.a`
         color: black;
     }
 `;
+
+export const SidebarBtn = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const SidebarBtnLink = styled.a`
+border-radius: 5px;
+background: #b79950;
+white-space: nowrap;
+padding: 10px 22px;
+margin-left: 15px;
+color: white;
+font-size: 16px;
+outline: none;
+border: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+&:hover {
+text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  background: #fff;
+  color: #b79950;
+}
+`;

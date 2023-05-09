@@ -46,27 +46,6 @@ const Navbar = ({ toggle }) => {
           <NavMenu>
             <NavItem>
                 <NavLinks
-                  // smooth
-                  // duration={500}
-                  // spy={true}
-                  // exact="true"
-                  onClick={() =>  {
-                    var my_element = document.getElementById("features");
-
-                      my_element.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                        inline: "nearest"
-                      });
-                  }}
-                  offset={-80}
-                  activeClass="active"
-                >
-                  Sobre nós
-                </NavLinks>
-            </NavItem>
-            <NavItem>
-                <NavLinks
                   smooth
                   duration={50}
                   onClick={() =>  window.scroll({
@@ -82,6 +61,26 @@ const Navbar = ({ toggle }) => {
                   Home
                 </NavLinks>
             </NavItem>
+            <NavItem>
+                <NavLinks
+                  smooth
+                  to="features"
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  activeClass="active"
+                >
+                  Sobre nós
+                </NavLinks>              
+            </NavItem>
+
+            <NavBtn>
+              <NavBtnLink onClick={() => {
+                // adicionar site da tasking
+                window.location.href = 'http://www.google.com';
+              }}>Tasking</NavBtnLink>
+            </NavBtn>
+
           </NavMenu>
         </NavbarContainer>
       </Nav>

@@ -8,6 +8,8 @@ import {
   SidebarLink,
   SideBtnWrap,
   SidebarRoute,
+  SidebarBtn,
+  SidebarBtnLink,
 } from "./SidebarElements";
 
 function Sidebar({ toggle, isOpen }) {
@@ -31,7 +33,25 @@ function Sidebar({ toggle, isOpen }) {
               Home
             </SidebarLink>
           </Link>
+          <SidebarLink
+              to="features"
+              onClick={toggle}
+              smooth
+              duration={500}
+              spy={true}
+              // exact="true"
+              offset={-80}
+            >
+              Sobre nós
+            </SidebarLink>
+
         </SidebarMenu>
+            <SidebarBtn>
+              <SidebarBtnLink onClick={() => {
+                // adicionar site da tasking
+                window.location.href = 'http://www.google.com';
+              }}>Tasking</SidebarBtnLink>
+            </SidebarBtn>
       </SidebarWrapper>
     </SidebarContainer>
   );
