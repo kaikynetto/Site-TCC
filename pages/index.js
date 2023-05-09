@@ -6,6 +6,7 @@ import Navbar from "../src/components/Navbar"
 import Welcome from "../src/components/Sections/Welcome/Welcome"
 import Sidebar from "../src/components/Sidebar"
 import Features from "../src/components/Sections/Features"
+import Encontre from "../src/components/Sections/EncontreProfissionais"
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,8 @@ export default function Home() {
       <Sidebar toggle={toggle} isOpen={isOpen} />
       <Navbar toggle={toggle} />
       <Welcome/>
-      <Features title="features" id="section2"/>
+      <Features title="features"/>
+      <Encontre/>
     </>
   )
 }
