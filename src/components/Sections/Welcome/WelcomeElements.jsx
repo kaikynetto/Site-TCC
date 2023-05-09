@@ -73,20 +73,11 @@ export const Subtitle = styled.h1`
 export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
-  align-items:center;
-  justify-content: center;
   text-align: center;
-  align-content: center;
-  margin-left: 60%;
-  margin-top: 10px;
 `;
 
 export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
-  align-items:center;
-  justify-content: center;
-  text-align: center;
-  align-content: center;
 `;

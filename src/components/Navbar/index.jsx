@@ -46,15 +46,19 @@ const Navbar = ({ toggle }) => {
           <NavMenu>
             <NavItem>
                 <NavLinks
-                  smooth
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  onClick={() =>  window.scroll({
-                    top: 600,
-                    left: 0,
-                    behavior: 'smooth'
-                 })}
+                  // smooth
+                  // duration={500}
+                  // spy={true}
+                  // exact="true"
+                  onClick={() =>  {
+                    var my_element = document.getElementById("features");
+
+                      my_element.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                        inline: "nearest"
+                      });
+                  }}
                   offset={-80}
                   activeClass="active"
                 >
