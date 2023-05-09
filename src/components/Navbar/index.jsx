@@ -48,11 +48,7 @@ const Navbar = ({ toggle }) => {
                 <NavLinks
                   smooth
                   duration={50}
-                  onClick={() =>  window.scroll({
-                    top: 0,
-                    left: 0,
-                    behavior: 'smooth'
-                 })}
+                  to="home"
                   spy={true}
                   exact="true"
                   offset={-80}

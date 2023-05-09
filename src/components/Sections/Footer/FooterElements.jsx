@@ -51,6 +51,7 @@ export const FooterLinkItems = styled.div`
 
 export const FooterLinkTitle = styled.h1`
   font-size: 14px;
+  text-align: center;
   margin-bottom: 16px;
   cursor: pointer;
   color: #b79950;

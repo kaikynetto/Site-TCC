@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Welcome() {
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <HeroWrapper>
         <HeroRow>
           <Column1>
