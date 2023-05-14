@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaFacebook,
   FaInstagram,
@@ -20,13 +20,25 @@ import {
   WebsiteRights,
   SocialIcons,
   SocialIconLink,
+  ContactContainer,
+  EmailInput,
+  IconButton,
 } from "./FooterElements";
-
+import { MdEmail } from 'react-icons/md';
 import { animateScroll as scroll } from "react-scroll";
+import emailjs from "@emailjs/browser";
 
 const Footer = () => {
+
+  const [assunto, setAssunto] = useState("");
+
   const toggleHome = () => {
     scroll.scrollToTop();
+  };
+
+  const sendEmail = (e) => {
+    var win = window.open(`mailto:taskingartemis@gmail.com?subject=${assunto || "Digite o seu assunto"}`, '_blank');
+    win.focus();
   };
 
   return (
@@ -50,15 +62,25 @@ const Footer = () => {
             <SocialLogo onClick={toggleHome} to="/">
               ARTEMIS
             </SocialLogo>
-            <WebsiteRights>
+            <ContactContainer>
+              <h1 style={{fontSize: 16}}>Entre em contato</h1>
+              <div style={{display: 'flex', alignContent: 'center', alignItems: 'center', justifyContent: 'center'}}>
+                <EmailInput onChange={e => setAssunto(e.target.value)} value={assunto} placeholder="Digite o assunto" type="email"/>
+                <IconButton onClick={() => sendEmail()}>
+                  <MdEmail size={24} stroke="#b79950" fill="#b79950" color="#b79950"/>
+                </IconButton>
+              </div>
+
+            </ContactContainer>
+            {/* <WebsiteRights>
               Artemis &copy; {new Date().getFullYear()} All rights reserved.
-            </WebsiteRights>
+            </WebsiteRights> */}
             <SocialIcons>
               <div>
                 <SocialIconLink href="/" target="_blank" aria-label="Facebook">
                     <FaFacebook />
                 </SocialIconLink>
-                <SocialIconLink href="/" target="_blank" aria-label="Instagram">
+                <SocialIconLink href="https://instagram.com/usetasking" target="_blank" aria-label="Instagram">
                     <FaInstagram color="#b79950" />
                 </SocialIconLink>
               </div>

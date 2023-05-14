@@ -4,16 +4,17 @@ import { Link as LinkS } from "react-scroll";
 
 export const FooterContainer = styled.footer`
   background-color: #171717;
+  height: 50vh;
 `;
 
 export const FooterWrapper = styled.div`
-  padding: 28px 24px;
+  padding: 38px 34px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 10px auto;
 `;
 
 export const FooterLinksContainer = styled.div`
@@ -123,5 +124,48 @@ export const SocialIconLink = styled.a`
     color: #b79950;
     transition: 0.3s;
     padding: 10px;
+  }
+`;
+
+export const ContactContainer = styled.div`
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+`;
+
+export const EmailInput = styled.input`
+  padding: 10px;
+  background: #b79950;
+  // border-radius: 5px;
+  // margin-top: 10px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  &::placeholder {
+    color: white;
+  }
+
+  @media screen and (max-width: 768px) {
+    // width: 100%;
+    width: 300px;
+    // margin-bottom: 10px;
+  }
+`;
+
+export const IconButton = styled.div`
+  // padding: 5px;
+  background: black;
+  // margin-top: 10px;
+  padding: 5px 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
   }
 `;

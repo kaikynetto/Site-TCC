@@ -10,7 +10,7 @@ export const FeaturesContainer = styled.div`
     height: 1100px;
   }
   @media screen and (max-width: 480px) {
-    height: 20vh;
+    height: 80vh;
   }
 `;
 
