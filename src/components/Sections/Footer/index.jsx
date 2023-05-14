@@ -62,8 +62,6 @@ const Footer = () => {
             <SocialLogo onClick={toggleHome} to="/">
               ARTEMIS
             </SocialLogo>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
 
             <ContactContainer>
               <h1 style={{fontSize: 16}}>Entre em contato</h1>
