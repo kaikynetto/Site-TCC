@@ -110,20 +110,22 @@ export const WebsiteRights = styled.small`
 
 export const SocialIcons = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  // justify-content: space-between;
   align-items: center;
-  width: 240px;
+  // width: 240px;
 `;
 
 export const SocialIconLink = styled.a`
   color: #b79950;
   font-size: 24px;
-  margin-left: 40px;
+  // margin-left: 40px;
+  transition: 0.3s ease-in-out;
 
   &:hover {
-    color: #b79950;
-    transition: 0.3s;
+    background: #b79950;
     padding: 10px;
+    border-radius: 5px;
   }
 `;
 

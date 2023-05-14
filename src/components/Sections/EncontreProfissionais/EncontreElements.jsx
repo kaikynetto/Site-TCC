@@ -6,6 +6,7 @@ export const EncontreContainer = styled.div`
   margin-bottom: 20vh;
   @media screen and (max-width: 768px) {
     padding: 100px 0px;
+    height: 120vh;
   }
 `;
 
