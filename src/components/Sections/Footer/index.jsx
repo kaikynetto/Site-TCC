@@ -62,6 +62,9 @@ const Footer = () => {
             <SocialLogo onClick={toggleHome} to="/">
               ARTEMIS
             </SocialLogo>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
             <ContactContainer>
               <h1 style={{fontSize: 16}}>Entre em contato</h1>
               <div style={{display: 'flex', alignContent: 'center', alignItems: 'center', justifyContent: 'center'}}>
@@ -77,9 +80,6 @@ const Footer = () => {
             </WebsiteRights> */}
             <SocialIcons>
               <div>
-                <SocialIconLink href="/" target="_blank" aria-label="Facebook">
-                    <FaFacebook />
-                </SocialIconLink>
                 <SocialIconLink href="https://instagram.com/usetasking" target="_blank" aria-label="Instagram">
                     <FaInstagram color="#b79950" />
                 </SocialIconLink>
