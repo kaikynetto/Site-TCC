@@ -44,6 +44,18 @@ function Sidebar({ toggle, isOpen }) {
             >
               Sobre nós
             </SidebarLink>
+            <Link href={"/contato"}>
+            <SidebarLink
+              onClick={toggle}
+              smooth
+              duration={500}
+              spy={true}
+              // exact="true"
+              offset={-80}
+            >
+              Contato
+            </SidebarLink>
+          </Link>
 
         </SidebarMenu>
             <SidebarBtn>

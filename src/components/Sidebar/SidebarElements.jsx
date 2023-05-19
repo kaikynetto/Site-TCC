@@ -28,7 +28,6 @@ export const Icon = styled.div`
     background: transparent;
     font-size: 2rem;
     cursor: pointer;
-    color: #6059f7;
     outline: none;
 `;
 

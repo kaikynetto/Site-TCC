@@ -70,6 +70,10 @@ const Navbar = ({ toggle }) => {
                 </NavLinks>              
             </NavItem>
 
+            <Link href={'/contato'}>
+                <NavLinks>Contato</NavLinks>
+            </Link>
+
             <NavBtn>
               <NavBtnLink onClick={() => {
                 // adicionar site da tasking
