@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { ContatoContainer, ContatoForm, Input, InputMsg, SendBtn } from '../src/components/Contato/ContatoElements'
-
+import { Column1, Column2, ContactDiv, ContactText, ContatoContainer, ContatoForm, ContatoRow, ContatoWrapper, Heading, Input, InputArea, InputBox, InputMsg, SendBtn, Subtitle } from '../src/components/Contato/ContatoElements'
+import {  BsTelephone } from 'react-icons/bs';
+import { AiOutlineMail, AiOutlineFileImage,AiOutlineMessage,AiOutlineUser, AiOutlineInstagram } from 'react-icons/ai';
 export default function Contato() {
 
   const [error, setError] = useState("");
@@ -21,13 +22,53 @@ export default function Contato() {
   return (
     <>
         <ContatoContainer>
-            <ContatoForm>
-                <h1 style={{fontSize: 18, textAlign: 'center', color: 'red'}}>{error}</h1>
-                <Input value={name} onChange={e => setName(e.target.value)} placeholder='Seu nome'/>
-                <Input value={email} onChange={e => setEmail(e.target.value)} placeholder='Seu email'/>
-                <InputMsg value={message} onChange={e => setMessage(e.target.value)} multiple placeholder='Digite aqui sua mensagem'/>
-                <SendBtn onClick={() => sendForm()} type='submit' value={"Enviar"}>Enviar</SendBtn>
-            </ContatoForm>
+            <ContatoWrapper>
+              <ContatoRow>
+                <Column1>
+                  <div style={{ justifyContent: 'center', textAlign: 'center', alignItems: 'center', alignContent: 'center'}}>
+                    <div>
+                      <Heading>Fale com a nossa equipe!</Heading>
+                      <Subtitle>Entre em contato com a nossa equipe pelo formulário ao lado, caso não seja respondido, contate-nos nos seguintes meios abaixo.</Subtitle>
+                    </div>
+                    <div style={{marginTop: 20, marginLeft: '35%', justifyContent: 'center', textAlign: 'center', alignItems: 'center', alignContent: 'center'}}>
+                      <ContactDiv>
+                        <BsTelephone size={32} color='white'/>
+                        <ContactText>(67) 3573-2763</ContactText>
+                      </ContactDiv>
+                      <ContactDiv>
+                        <AiOutlineMail size={32} color='white'/>
+                        <ContactText>taskingartemis@gmail.com</ContactText>
+                      </ContactDiv>
+                      <ContactDiv>
+                        <AiOutlineInstagram size={32} color='white'/>
+                        <ContactText>@usetasking</ContactText>
+                      </ContactDiv>
+                    </div>
+                  </div>
+                </Column1>
+                <Column2>
+                  <form style={{padding: 10, maxWidth: "100%"}}>
+                    <InputBox>
+                      <AiOutlineUser size={26} fill='#b79950'/>
+                      <Input type="text" placeholder='Digite o seu nome'/>
+                    </InputBox>
+                    <InputBox>
+                      <AiOutlineMail size={26} fill='#b79950'/>
+                      <Input type="text" placeholder='Digite o seu email'/>
+                    </InputBox>
+                    <InputBox>
+                      <AiOutlineMessage size={26} fill='#b79950'/>
+                      <InputArea type="text" placeholder='Digite o seu assunto'/>
+                    </InputBox>
+                    <InputBox>
+                      <AiOutlineFileImage size={26} fill='#b79950'/>
+                      <Input type="file" placeholder='Digite o seu assunto'/>
+                    </InputBox>
+                    <SendBtn type='submit' value={'Enviar mensagem'}/>
+                  </form>
+                </Column2>
+              </ContatoRow>
+            </ContatoWrapper>
         </ContatoContainer>
     </>
   )
