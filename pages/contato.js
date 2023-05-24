@@ -8,14 +8,39 @@ export default function Contato() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [imageData, setImageData] = useState('');
 
-  const sendForm = async () => {
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+      const base64Image = e.target.result;
+      setImageData(base64Image);
+    };
+
+    reader.readAsDataURL(file);
+
+  };
+
+  const sendForm = () => {
     if(!name) {
         setError("Insira seu nome!")
     } else if(!email) {
         setError("Insira seu email!")
     } else if(!message) {
         setError("Insira sua mensagem!");
+    } else {
+      setError("");
+
+      const data = {
+        name,
+        email,
+        message,
+        image: imageData
+      }
+
+      
     }
   }
 
@@ -47,7 +72,12 @@ export default function Contato() {
                   </div>
                 </Column1>
                 <Column2>
-                  <form style={{padding: 10, maxWidth: "100%"}}>
+                  <div style={{padding: 10, maxWidth: "100%"}}>
+                    {error && (
+                      <>
+                        <h1 style={{fontSize: 22, marginBottom: 20, color: 'red'}}>{error}</h1>
+                      </>
+                    )}
                     <InputBox>
                       <AiOutlineUser size={26} fill='#b79950'/>
                       <Input type="text" placeholder='Digite o seu nome'/>
@@ -62,10 +92,10 @@ export default function Contato() {
                     </InputBox>
                     <InputBox>
                       <AiOutlineFileImage size={26} fill='#b79950'/>
-                      <Input type="file" placeholder='Digite o seu assunto'/>
+                      <Input onChange={handleFileUpload} type="file" placeholder='Digite o seu assunto'/>
                     </InputBox>
-                    <SendBtn type='submit' value={'Enviar mensagem'}/>
-                  </form>
+                    <SendBtn onClick={() => sendForm()} type='submit' />
+                  </div>
                 </Column2>
               </ContatoRow>
             </ContatoWrapper>
