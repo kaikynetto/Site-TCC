@@ -21,7 +21,6 @@ export default function Contato() {
     reader.onload = (e) => {
       const base64Image = e.target.result;
       setImageData(base64Image);
-      
     };
 
     reader.readAsDataURL(file);
@@ -43,15 +42,23 @@ export default function Contato() {
         name,
         email,
         message,
-        image: imageData
+        image: imageData | "undefined"
       }
     
       axios({
-        method: "get",
-        url: `http://localhost/api-tasking/contact.php?email=${email}&assunto=${message}&name=${name}&imagem='undefined'`
+        method: "POST",
+        url: `http://localhost/artemis-api/feedback.php`,
+        data: {
+          name,
+          email,
+          message,
+          image: imageData || "undefined"
+        }
       }).then((res) => {
-        if(res.data == "request send!") {
+        if(res.data.status == "OK!") {
           setFormSended(true);
+        } else {
+          alert("Erro ao enviar seu formúlario, tente novamente!");
         }
       })
       
@@ -106,10 +113,10 @@ export default function Contato() {
                       <AiOutlineMessage size={26} fill='#b79950'/>
                       <InputArea value={message} onChange={e => setMessage(e.target.value)} type="text" placeholder='Digite o seu assunto'/>
                     </InputBox>
-                    {/* <InputBox>
+                    <InputBox>
                       <AiOutlineFileImage size={26} fill='#b79950'/>
                       <Input onChange={handleFileUpload} type="file" placeholder='Digite o seu assunto'/>
-                    </InputBox> */}
+                    </InputBox>
                     <SendBtn onClick={() => sendForm()} type='submit' />
                   </div>
                     </>

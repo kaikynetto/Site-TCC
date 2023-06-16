@@ -87,6 +87,7 @@ border: none;
 background: none;
 color: var(--primary-color);
 outline: none;
+width: 100%;
 margin-left: 5px;
 display: block;
 `;
